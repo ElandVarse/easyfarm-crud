@@ -1,0 +1,17 @@
+.addTodo{
+    width: 100%;
+    padding: 32px 0px;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.addTodo input{
+    font-size: 16px;
+    margin: 0px 2px;
+    padding: 8px 16px;
+    box-shadow: 3px 3px 8px #00000055;
+}

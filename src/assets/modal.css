@@ -1,0 +1,42 @@
+.modal-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+    background-color: #00000055
+}
+
+.modal{
+    position: fixed; 
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 99;
+
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 16px;        
+
+    padding: 25px;
+}
+
+.modal input{
+    font-size: 16px;
+    margin: 4px;
+    padding: 8px 16px;
+    border: none;
+    box-shadow: 3px 3px 8px #00000055;
+}
+
+.fade-enter-active, 
+.fade-leave-active{
+    transition: opacity .2s;
+}
+
+.fade-enter,
+.fade-leave-to{
+    opacity: 0;
+}

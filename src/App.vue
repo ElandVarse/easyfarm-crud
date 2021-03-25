@@ -39,9 +39,9 @@
         <transition name="fade" appear>
             <form class="modal" v-if="showModal">
                 <h2>Editar atividade</h2>
-                <input type="text"  id="editProject" v-model="editData.project"  placeholder="Projeto"><br>
-                <input type="text"  id="editName"    v-model="editData.name"     placeholder="name"><br>
-                <input type="text"  id="editStatus"  v-model="editData.status"   placeholder="Status">
+                <input type="text"  id="editProject" v-model="editData.project" :placeholder="todos[idToChange].project"><br>
+                <input type="text"  id="editName"    v-model="editData.name"    :placeholder="todos[idToChange].name"><br>
+                <input type="text"  id="editStatus"  v-model="editData.status"  :placeholder="todos[idToChange].status"><br>
                 <button @click="doneEditing" style="margin-top: 16px">Confirmar</button>
             </form>
         </transition>

@@ -39,9 +39,9 @@
         <transition name="fade" appear>
             <form class="modal" v-if="showModal">
                 <h2>Editar atividade</h2>
-                <input type="text"  id="editProject" v-model="editData.project" :placeholder="todos[idToChange].project"><br>
-                <input type="text"  id="editName"    v-model="editData.name"    :placeholder="todos[idToChange].name"><br>
-                <input type="text"  id="editStatus"  v-model="editData.status"  :placeholder="todos[idToChange].status"><br>
+                <input type="text"  id="editProject" v-model="project" :placeholder="todos[idToChange].project">
+                <input type="text"  id="editName"    v-model="name"    :placeholder="todos[idToChange].name">
+                <input type="text"  id="editStatus"  v-model="status"  :placeholder="todos[idToChange].status">
                 <button @click="doneEditing" style="margin-top: 16px">Confirmar</button>
             </form>
         </transition>
@@ -63,14 +63,7 @@
                 todos:[],
 
                 idToEdit: '',
-
-                editData:{
-                    name: '',
-                    project: '',
-                    status: '',
-                }
             }
-                   
         },
 
         created(){
@@ -107,30 +100,30 @@
                 this.showModal = false
 
                 // Validations
-                if(this.editData.name.length<=0){
+                if(this.name.length<=0){
                     this.todos[this.idToChange].name;
                 }
                 else{
-                    this.todos[this.idToChange].name = this.editData.name;
+                    this.todos[this.idToChange].name = this.name;
                 }
-                if(this.editData.project.length<=0){
+                if(this.project.length<=0){
                     this.todos[this.idToChange].project;
                 }
                 else{
-                    this.todos[this.idToChange].project = this.editData.project;
+                    this.todos[this.idToChange].project = this.project;
                 }
-                if(this.editData.status.length<=0){
+                if(this.status.length<=0){
                     this.todos[this.idToChange].status;
                 }
                 else{
-                    this.todos[this.idToChange].status  = this.editData.status;
+                    this.todos[this.idToChange].status  = this.status;
                 }
                 
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(this.todos));
 
-                this.editData.name = ''
-                this.editData.project = ''
-                this.editData.status = ''
+                this.name = ''
+                this.project = ''
+                this.status = ''
             }
         }
     }

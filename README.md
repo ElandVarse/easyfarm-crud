@@ -9,6 +9,8 @@ Vue application to show that i can do something in vue 😂
 ## Edit 
 ![Edit](https://i.imgur.com/2xFuEPL.png)
 
+### You can check the result here: 
+https://elandvarse.github.io/vue-crud/
 
 ### Installation ###
 
@@ -19,3 +21,5 @@ Vue application to show that i can do something in vue 😂
 
 # 3. Yarn serve;
 ```
+
+

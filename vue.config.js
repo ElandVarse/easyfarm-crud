@@ -1,3 +1,5 @@
 module.exports = {
-    publicPath: '/vue-crud'
-}
+    publicPath: process.env.NODE_ENV === 'production'
+      ? '/vue-crud/'
+      : '/'
+  }

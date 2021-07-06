@@ -1,24 +1,21 @@
-# easyfarm-crud
+# Vue Crud
 
-## Project setup
-```
-yarn install
-```
+Vue application to show that i can do something in vue 😂
+<br> All info is saved in the local storage!
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Home
+![Home](https://i.imgur.com/WLygvIs.png)
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Edit 
+![Edit](https://i.imgur.com/2xFuEPL.png)
 
-### Lints and fixes files
-```
-yarn lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Installation ###
+
+```sh
+# 1. Go to the files;
+
+# 2. Yarn install;
+
+# 3. Yarn serve;
+```

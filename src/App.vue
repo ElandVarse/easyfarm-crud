@@ -1,25 +1,25 @@
 <template>
     <div class="app">
-        <h1>Easyfarm <span>CRUD</span></h1>
+        <h1>Vue <span>CRUD</span></h1>
 
         <!-- Info insertion -->
         <form class="addTodo"> 
             <fieldset>
-                <input type="text" id="projeto" v-model="project" placeholder="Projeto">
-                <input type="text" id="name"    v-model="name" placeholder="Nome">
+                <input type="text" id="projeto" v-model="project" placeholder="Project">
+                <input type="text" id="name"    v-model="name" placeholder="Name">
                 <input type="text" id="status"  v-model="status" placeholder="Status">
-                <button @click="addTodo">Adicionar</button>
+                <button @click="addTodo">Add</button>
             </fieldset>
         </form>
 
         <!-- Todo List -->
         <table class="todo" v-if="todos.length>0"> 
             <tr>
-                <th>Projeto</th>
-                <th>Nome</th>
+                <th>Project</th>
+                <th>Name</th>
                 <th>Status</th>
-                <th style="background-color: #2f66cd">Editar</th>
-                <th style="background-color: #ff2525">Apagar</th>
+                <th style="background-color: #2f66cd">Edit</th>
+                <th style="background-color: #ff2525">Delete</th>
             </tr>
 
             <tr v-for="todo in todos" :key="todo.id"> 
@@ -38,11 +38,11 @@
 
         <transition name="fade" appear>
             <form class="modal" v-if="showModal">
-                <h2>Editar atividade</h2>
+                <h2>Edit</h2>
                 <input type="text"  id="editProject" v-model="project" :placeholder="todos[idToChange].project">
                 <input type="text"  id="editName"    v-model="name"    :placeholder="todos[idToChange].name">
                 <input type="text"  id="editStatus"  v-model="status"  :placeholder="todos[idToChange].status">
-                <button @click="doneEditing" style="margin-top: 16px">Confirmar</button>
+                <button @click="doneEditing" style="margin-top: 16px">Done!</button>
             </form>
         </transition>
     </div>
@@ -73,7 +73,7 @@
         methods: {
             addTodo(){
                 if(this.name.length<=0 || this.project.length<=0 || this.status.length<=0){
-                    alert("Por favor, preencha o formulário corretamente.")
+                    alert("Please, fill the form correctly.")
                 }
                 else{
                     this.todos.push({
